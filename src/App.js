@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Greet from "./Greet";
+import Test from "./Test";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greet name='Adekunle' Heroname='superman'>
+          <p>This is a children props</p>
+         </Greet> 
+      <Greet name='Bdullah' Heroname='Batman'>
+        <button>Action</button> 
+      </Greet>
+      <Greet name='Kola' Heroname='coolman'/>
+      <Test name='Kolade' state='osun'>
+        <p>This a children props</p>
+      </Test>
+      <Test name=  'adekilekun' state='ondo'/>
+      <Test name='ajagbe' state='oyo'/>
+      <Test name= 'abebi' state='lagos'/>
     </div>
   );
 }
