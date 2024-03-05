@@ -1,6 +1,11 @@
 import Greet from "./Greet";
-import Test from "./Test";
+import { useState } from "react";
+// import Test from "./Test";
 function App() {
+  const [data, setData] = useState("tunde")
+  const updateData = () => {
+   setData("kunle")
+  }
   return (
     <div className="App">
       <Greet name='Adekunle' Heroname='superman'>
@@ -10,12 +15,8 @@ function App() {
         <button>Action</button> 
       </Greet>
       <Greet name='Kola' Heroname='coolman'/>
-      <Test name='Kolade' state='osun'>
-        <p>This a children props</p>
-      </Test>
-      <Test name=  'adekilekun' state='ondo'/>
-      <Test name='ajagbe' state='oyo'/>
-      <Test name= 'abebi' state='lagos'/>
+    <h1>{data}</h1>
+    <button onClick={updateData}>Update Data</button>
     </div>
   );
 }
